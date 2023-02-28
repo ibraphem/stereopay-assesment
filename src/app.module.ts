@@ -11,14 +11,17 @@ import { APP_INTERCEPTOR } from '@nestjs/core';
 import { HttpResponseInterceptor } from './interceptors/http-responcse.interceptor';
 import { ValidationInterceptor } from './interceptors/validation.interceptor';
 
+
+
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
     type: 'mysql',
     host: 'localhost',
     port: 3306,
-    username: 'root',
-    password: '',
+    username: "root",
+    password: "",
     database: 'stereoPayAssesmentDb',
     entities: [Media],
     synchronize: false, 
